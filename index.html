@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Xanh Hạ Long — Đặt Xe Ngay: 0388 988 212</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#059669',
+                        secondary: '#0F766E',
+                        accent: '#EAB308',
+                        danger: '#DC2626',
+                        dark: '#1E293B',
+                        light: '#F0FDF4',
+                        blueMain: '#1E6BC3',
+                        blueDark: '#0F4A8C'
+                    },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .pulse-call { animation: pulse 2s infinite; }
+            @keyframes pulse {
+                0% { box-shadow: 0 0 0 0 rgba(220,38,38,0.4); }
+                70% { box-shadow: 0 0 0 15px rgba(220,38,38,0); }
+                100% { box-shadow: 0 0 0 0 rgba(220,38,38,0); }
+            }
+            .price-gradient { background: linear-gradient(135deg, #1E6BC3 0%, #0F4A8C 100%); }
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-light">
+    <div class="bg-danger text-white py-3 text-center font-bold text-lg">
+        <a href="tel:0388988212" class="inline-flex items-center gap-2">
+            <i class="fa fa-phone fa-fw animate-pulse"></i> HOTLINE: 0388 988 212
+        </a>
+    </div>
+
+    <header class="sticky top-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <span class="text-2xl text-primary"><i class="fa fa-taxi"></i></span>
+                <span class="text-xl font-bold">Taxi<span class="text-primary">XanhHạLong</span></span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 font-medium">
+                <a href="#gia-cuoc" class="hover:text-primary">Giá Theo Km</a>
+                <a href="#bao-gia" class="hover:text-danger font-bold">Đặt Xe</a>
+                <a href="#bang-gia-tuyen" class="hover:text-blueMain font-bold">Bảng Giá Tuyến</a>
+            </nav>
+            <a href="tel:0388988212" class="hidden md:inline-flex items-center gap-2 px-5 py-2 bg-danger text-white rounded-full font-bold pulse-call">
+                <i class="fa fa-phone"></i> Đặt Xe Ngay
+            </a>
+            <button class="md:hidden text-xl" id="menuBtn"><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="md:hidden hidden absolute w-full bg-white shadow-lg" id="mobileMenu">
+            <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
+                <a href="#gia-cuoc" class="py-2">Giá Theo Km</a>
+                <a href="#bao-gia" class="py-2 text-danger font-bold">Đặt Xe</a>
+                <a href="#bang-gia-tuyen" class="py-2 text-blueMain font-bold">Bảng Giá Tuyến</a>
+                <a href="tel:0388988212" class="py-3 bg-danger text-white text-center rounded-full font-bold">
+                    <i class="fa fa-phone"></i> Gọi Ngay: 0388 988 212
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-cover bg-center py-20" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://picsum.photos/id/1039/1920/800');">
+            <div class="container mx-auto px-4 text-white text-center">
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6">DỊCH VỤ TAXI XANH HẠ LONG</h1>
+                <p class="text-lg md:text-xl mb-8">Xe đời mới • Đón trả tận nơi • Phục vụ 24/7 • Giá rõ ràng</p>
+                <a href="tel:0388988212" class="inline-flex items-center gap-3 px-8 py-4 bg-accent text-dark font-bold text-xl rounded-full pulse-call">
+                    <i class="fa fa-phone"></i> ĐẶT XE NGAY: 0388 988 212
+                </a>
+            </div>
+        </section>
+
+        <section id="gia-cuoc" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-10">
+                    <h2 class="text-2xl font-bold text-primary mb-2">BẢNG GIÁ CƯỚC THEO KM</h2>
+                    <p class="text-gray-600">Khứ hồi giảm 50% chiều về</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <h3 class="text-xl font-bold mb-2">XE 5 CHỖ</h3>
+                        <p class="text-2xl font-bold text-primary mb-3">12.000đ/km</p>
+                        <p>Chiều về khứ hồi: <span class="font-bold text-green-600">6.000đ/km</span></p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <h3 class="text-xl font-bold mb-2">XE 7 CHỖ</h3>
+                        <p class="text-2xl font-bold text-accent mb-3">16.000đ/km</p>
+                        <p>Chiều về khứ hồi: <span class="font-bold text-green-600">8.000đ/km</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bao-gia" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-xl mx-auto border-3 border-danger rounded-2xl p-6 bg-gray-50">
+                    <h2 class="text-2xl font-bold text-danger text-center mb-6">BÁO GIÁ ĐẶT XE</h2>
+                    <form action="https://formsubmit.co/macduchaifb@gmail.com" method="POST" class="space-y-4">
+                        <input type="hidden" name="_subject" value="Yêu cầu báo giá đặt xe mới">
+                        <input type="hidden" name="_captcha" value="false">
+                        <div>
+                            <label class="flex items-center gap-2 text-gray-700 font-medium mb-1">
+                                <i class="fa fa-user text-danger"></i> Họ & Tên
+                            </label>
+                            <input type="text" name="ho_ten" required placeholder="Nhập họ tên"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-danger/50">
+                        </div>
+                        <div>
+                            <label class="flex items-center gap-2 text-gray-700 font-medium mb-1">
+                                <i class="fa fa-phone text-danger"></i> Số Điện Thoại
+                            </label>
+                            <input type="tel" name="dien_thoai" required placeholder="Số điện thoại"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-danger/50">
+                        </div>
+                        <div>
+                            <label class="flex items-center gap-2 text-gray-700 font-medium mb-1">
+                                <i class="fa fa-map-marker text-danger"></i> Điểm Đón
+                            </label>
+                            <input type="text" name="diem_don" required placeholder="Nơi đón"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-danger/50">
+                        </div>
+                        <div>
+                            <label class="flex items-center gap-2 text-gray-700 font-medium mb-1">
+                                <i class="fa fa-map-marker text-danger"></i> Điểm Đến
+                            </label>
+                            <input type="text" name="diem_den" required placeholder="Nơi đến"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-danger/50">
+                        </div>
+                        <div>
+                            <label class="flex items-center gap-2 text-gray-700 font-medium mb-1">
+                                <i class="fa fa-car text-danger"></i> Loại Xe
+                            </label>
+                            <select name="loai_xe" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-danger/50">
+                                <option value="">-- Chọn loại xe --</option>
+                                <option value="Ghép 1 người">Ghép 1 người</option>
+                                <option value="Ghép 2 người">Ghép 2 người</option>
+                                <option value="Bao xe 5 chỗ">Bao xe 5 chỗ</option>
+                                <option value="Bao xe 7 chỗ">Bao xe 7 chỗ</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="flex items-center gap-2 text-gray-700 font-medium mb-1">
+                                <i class="fa fa-calendar text-danger"></i> Ngày/Giờ & Ghi chú
+                            </label>
+                            <textarea name="ghi_chu" rows="3" placeholder="Ngày đi, giờ đi, yêu cầu khác..."
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-danger/50"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-danger text-white text-lg font-bold rounded-lg hover:bg-red-700">
+                            NHẬN BÁO GIÁ
+                        </button>
+                    </form>
+                    <p class="text-center text-gray-500 mt-3 text-sm">
+                        Hoặc gọi: <a href="tel:0388988212" class="text-danger font-bold">0388 988 212</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- === BẢNG GIÁ THEO TUYẾN - Ở CUỐI TRANG === -->
+        <section id="bang-gia-tuyen" class="py-16 price-gradient text-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-bold mb-2">XE ĐỜI MỚI ĐÓN TRẢ TẬN NƠI</h2>
+                    <p class="text-lg text-blue-100">NHIỆT TÌNH — CHU ĐÁO — TIN CẬY — TRỌN GÓI CAO TỐC</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto rounded-xl shadow-2xl overflow-hidden bg-white/10 backdrop-blur">
+                    <div class="hidden md:grid grid-cols-5 bg-white/20 font-bold text-center py-3">
+                        <div class="text-left px-4">Tuyến đường</div>
+                        <div>Ghép 1 người</div>
+                        <div>Ghép 2 người</div>
+                        <div>Bao xe 5 chỗ</div>
+                        <div>Bao xe 7 chỗ</div>
+                    </div>
+                    <div class="divide-y divide-white/10">
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-2 py-4 px-4 hover:bg-white/10">
+                            <div class="font-bold text-lg">Hạ Long → Hải Phòng</div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1 mt-1 md:mt-0"><span class="md:hidden text-blue-200">Ghép 1: </span><span class="font-bold">250.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">Ghép 2: </span><span class="font-bold">—</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">5 chỗ: </span><span class="font-bold text-yellow-300">400.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">7 chỗ: </span><span class="font-bold text-yellow-300">500.000đ</span></div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-2 py-4 px-4 hover:bg-white/10 bg-white/5">
+                            <div class="font-bold text-lg">Hà Nội → Hải Phòng</div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1 mt-1 md:mt-0"><span class="md:hidden text-blue-200">Ghép 1: </span><span class="font-bold">400.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">Ghép 2: </span><span class="font-bold">700.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">5 chỗ: </span><span class="font-bold text-yellow-300">900.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">7 chỗ: </span><span class="font-bold text-yellow-300">1.000.000đ</span></div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-2 py-4 px-4 hover:bg-white/10">
+                            <div class="font-bold text-lg">Hạ Long → Hà Nội</div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1 mt-1 md:mt-0"><span class="md:hidden text-blue-200">Ghép 1: </span><span class="font-bold">450.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">Ghép 2: </span><span class="font-bold">800.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">5 chỗ: </span><span class="font-bold text-yellow-300">1.100.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">7 chỗ: </span><span class="font-bold text-yellow-300">1.200.000đ</span></div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-2 py-4 px-4 hover:bg-white/10 bg-white/5">
+                            <div class="font-bold text-lg">Hạ Long → Móng Cái</div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1 mt-1 md:mt-0"><span class="md:hidden text-blue-200">Ghép 1: </span><span class="font-bold">350.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">Ghép 2: </span><span class="font-bold">600.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">5 chỗ: </span><span class="font-bold text-yellow-300">1.000.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">7 chỗ: </span><span class="font-bold text-yellow-300">1.200.000đ</span></div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-2 py-4 px-4 hover:bg-white/10">
+                            <div class="font-bold text-lg">Hải Phòng → Móng Cái</div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1 mt-1 md:mt-0"><span class="md:hidden text-blue-200">Ghép 1: </span><span class="font-bold">500.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">Ghép 2: </span><span class="font-bold">900.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">5 chỗ: </span><span class="font-bold text-yellow-300">1.500.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">7 chỗ: </span><span class="font-bold text-yellow-300">1.700.000đ</span></div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-2 py-4 px-4 hover:bg-white/10 bg-white/5">
+                            <div class="font-bold text-lg">Hà Nội → Móng Cái</div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1 mt-1 md:mt-0"><span class="md:hidden text-blue-200">Ghép 1: </span><span class="font-bold">600.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">Ghép 2: </span><span class="font-bold">1.100.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">5 chỗ: </span><span class="font-bold text-yellow-300">2.300.000đ</span></div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1"><span class="md:hidden text-blue-200">7 chỗ: </span><span class="font-bold text-yellow-300">2.500.000đ</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 max-w-3xl mx-auto bg-white/10 rounded-xl p-5">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+                        <div>
+                            <p class="text-blue-100 text-sm">📞 LIÊN HỆ ĐẶT XE NGAY</p>
+                            <a href="tel:0388988212" class="text-2xl font-bold text-yellow-300">0388 988 212</a>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 text-sm">
+                            <div class="flex flex-col items-center"><i class="fa fa-shield text-lg mb-1 text-yellow-300"></i><span>An toàn</span></div>
+                            <div class="flex flex-col items-center"><i class="fa fa-clock-o text-lg mb-1 text-yellow-300"></i><span>Đúng giờ</span></div>
+                            <div class="flex flex-col items-center"><i class="fa fa-thumbs-up text-lg mb-1 text-yellow-300"></i><span>Tận tâm</span></div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-center text-blue-100 text-sm">
+                        📦 Nhận gửi hàng: nhỏ 100.000–150.000đ, to 200.000–300.000đ
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white pt-10 pb-6 mb-16 md:mb-0">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-xl font-bold mb-2">Taxi Xanh Hạ Long</h3>
+            <p class="text-gray-400 mb-3">Đón trả tận nơi • Xe đời mới • Giá rõ ràng • 24/7</p>
+            <p class="mb-1"><a href="tel:0388988212" class="text-yellow-300 font-bold">📞 0388 988 212</a></p>
+            <p class="text-sm text-gray-500">© 2026 — Email: macduchaifb@gmail.com</p>
+        </div>
+    </footer>
+
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t shadow-lg py-2 z-50 flex justify-around">
+        <a href="tel:0388988212" class="flex flex-col items-center text-danger font-bold"><i class="fa fa-phone text-lg"></i><span class="text-xs mt-1">Gọi</span></a>
+        <a href="#bang-gia-tuyen" class="flex flex-col items-center text-blueMain font-bold"><i class="fa fa-table text-lg"></i><span class="text-xs mt-1">Giá</span></a>
+        <a href="#bao-gia" class="flex flex-col items-center text-danger font-bold"><i class="fa fa-file-text-o text-lg"></i><span class="text-xs mt-1">Đặt Xe</span></a>
+        <a href="https://zalo.me/0388988212" target="_blank" class="flex flex-col items-center text-blue-600 font-bold"><i class="fa fa-comments text-lg"></i><span class="text-xs mt-1">Zalo</span></a>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
